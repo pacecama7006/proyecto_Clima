@@ -1,3 +1,4 @@
+import { apiKey } from "./env.js";
 /*Selectores */
 const conteiner = document.querySelector('.container');
 const resultado = document.querySelector('#resultado');
@@ -62,7 +63,7 @@ function mostrarError(mensaje) {
 
 function consultarApi(ciudad, pais) {
     // Tomamos el key de la api
-    const appId = 'd42c9c6286193fbae1ec8a0f4be70405';
+    const appId = apiKey;
     // Estos datos los tomo de la api (https://openweathermap.org/current)y lo modifico con $ciudad, $pais y $appId
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
 
